@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Results</title>
+  </head>
+  <body>
+    <h1>Here are the Awesome Dogs!</h1>
+      <ul>
+        <li><%= collections[0].name %></li>
+        <li><button style="margin-top: 10px;"><a href='/dog/edit/<%=collections[0].id %>'>Change'em Up</a></button></li>
+        <li><button style="margin-top: 10px;"><a href='/dog/destroy/<%=collections[0].id %>'>Put'em Down</a></button></li>
+        <hr />
+      </ul>
+
+    <button style="margin-top: 10px;"><a href='/dogs/new'>Make Some</a></button>
+    <button style="margin-top: 10px;"><a href='/'>See'em all!</a></button>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Results</title>
+  </head>
+  <body>
+    <h1>Here are the Awesome Dogs!</h1>
+    <% if (collections.length == undefined) { %>
+      <p>No Dogs Yet!!!</p>
+    <% } else { %>
+      <% for(var i=collections.length-1; i >= 0; i--){ %>
+        <ul>
+          <li><%= collections[i].name %></li>
+          <li><%= collections[i].createdAt.toDateString() %></li>
+          <li><button style="margin-top: 10px;"><a href='/dog/show/<%=collections[i].id %>'>Check'em Out</a></button></li>
+          <li><button style="margin-top: 10px;"><a href='/dog/edit/<%=collections[i].id %>'>Change'em Up</a></button></li>
+          <li><button style="margin-top: 10px;"><a href='/dog/destroy/<%=collections[i].id %>'>Put'em Down</a></button></li>
+          <hr />
+        </ul>
+    <% }} %>
+
+
+    <button style="margin-top: 10px;"><a href='/new'>Make Some</a></button>
+  </body>
+</html>
